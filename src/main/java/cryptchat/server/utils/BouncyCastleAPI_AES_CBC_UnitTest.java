@@ -1,4 +1,4 @@
-package com.ibm.integration.resources.java.bcltwtapi.AES_CBC;
+package package cryptchat.server.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
