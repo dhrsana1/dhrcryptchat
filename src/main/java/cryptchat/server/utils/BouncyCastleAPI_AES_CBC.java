@@ -20,7 +20,7 @@
  * @version 2011
  *
  */
-package com.ibm.integration.resources.java.bcltwtapi.AES_CBC;
+package cryptchat.server.utils;
 
 /**
  *
