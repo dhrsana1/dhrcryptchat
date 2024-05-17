@@ -48,7 +48,7 @@ public class KeyExchange {
     }
 
     public void generateDHKeyPair() throws NoSuchAlgorithmException {
-        serverKeyPair = KeyPairGenerator.getInstance(Algorithm.DH.getName());
+        serverKeyPair = KeyPairGenerator.getInstance("dh");
         serverKeyPair.initialize(2048);
 
         serverPair = serverKeyPair.generateKeyPair();
@@ -65,7 +65,7 @@ public class KeyExchange {
     }
 
     public void initDHAgreement() throws NoSuchAlgorithmException, InvalidKeyException {
-        serverKeyAgreement = KeyAgreement.getInstance(Algorithm.DH.getName());
+        serverKeyAgreement = KeyAgreement.getInstance("dh");
         serverKeyAgreement.init(privateKey);
     }
 
@@ -83,7 +83,7 @@ public class KeyExchange {
 
         byte[] pubKeyDecoded = decodeBase64(publicKeyBase64);
 
-        keyFactory = KeyFactory.getInstance(Algorithm.DH.getName());
+        keyFactory = KeyFactory.getInstance("dh");
         x509KeySpec = new X509EncodedKeySpec(pubKeyDecoded);
 
         PublicKey publicKey1 = keyFactory.generatePublic(x509KeySpec);
