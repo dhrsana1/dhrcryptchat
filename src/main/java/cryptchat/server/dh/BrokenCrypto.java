@@ -13,7 +13,7 @@ import java.security.NoSuchAlgorithmException;
 public class BrokenCrypto {
 	public static void main(String[] args) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException,
 			IllegalBlockSizeException, BadPaddingException {
-		Cipher cipher = Cipher.getInstance(Transformations.DES.name());
+		Cipher cipher = Cipher.getInstance("DES");
 		KeyGenerator keyGen = KeyGenerator.getInstance(Transformations.valueOf("DES").toString());
 		System.out.println(Transformations.values()[1]);
 		cipher.init(Cipher.ENCRYPT_MODE, keyGen.generateKey());
