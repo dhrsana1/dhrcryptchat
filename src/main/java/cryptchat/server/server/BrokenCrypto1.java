@@ -1,5 +1,4 @@
-package com.ibm.integration.resources.java.BrokenCrypto1;
-
+package cryptchat.server.server;
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
